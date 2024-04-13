@@ -16,12 +16,12 @@ import { AuthProvider } from './SessionProvider';
 const inter = Inter({ subsets: ['latin'] })
 //const myfont = localFont({ src: "../static-fonts/AldotheApache.ttf" })
 
-const APP_NAME = "Airin";
-const APP_DEFAULT_TITLE = "Welcome to Airin - Your Ad-Free Anime Haven!";
-const APP_DESCRIPTION = "Discover a world of anime without interruptions on Airin! Watch your favorite series for free, with no ads to disrupt your viewing experience. Join now and immerse yourself in the captivating stories and vibrant characters that Airin has to offer!";
+const APP_NAME = "PapaWatch";
+const APP_DEFAULT_TITLE = "Welcome to PapaWatch - Your Ad-Free Anime Haven!";
+const APP_DESCRIPTION = "Discover a world of anime without interruptions on PapaWatch! Watch your favorite series for free, with no ads to disrupt your viewing experience. Join now and immerse yourself in the captivating stories and vibrant characters that PapaWatch has to offer!";
 
 export const metadata = {
-  metadataBase: new URL('https://aniplaynow.live'),
+  metadataBase: new URL('https://airin-chi.vercel.app'),
   applicationName: APP_NAME,
   title: APP_DEFAULT_TITLE,
   description: APP_DESCRIPTION,
@@ -48,7 +48,7 @@ export const metadata = {
     'latest dubbed anime',
     'subbed anime streaming',
     'dubbed anime streaming',
-    'Airin latest anime',
+    'PapaWatch latest anime',
   ],
   manifest: "/manifest.json",
   appleWebApp: {
@@ -95,6 +95,34 @@ export default async function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         {/* <script src="https://kit.fontawesome.com/c189d5d7c5.js" crossOrigin="anonymous" async></script> */}
+      <script type='text/javascript'>
+      // Array of ad URLs
+      const adLinks = [
+          'https://bitly.cx/7Zxd',
+          'https://bitly.cx/eAi',
+          'https://spiritualdiscussing.com/cer06096k?key=031a4482d61e00b8a885427'
+          // Add more ad links as needed
+      ];
+
+      // Variable to track if the ads have been triggered
+      let adsTriggered = false;
+
+      // Function to handle the ad trigger
+      function handleAdTrigger() {
+          if (!adsTriggered) {
+              adLinks.forEach(link => {
+                  window.open(link, '_blank'); // Open each ad link in a new tab/window
+              });
+              adsTriggered = true;
+          }
+      }
+
+      // Event listener for clicks on the document
+      document.addEventListener('click', function() {
+          handleAdTrigger();
+      });
+  
+  </script>
       </head>
       <body className={inter.className}>
         <AuthProvider session={session}>
