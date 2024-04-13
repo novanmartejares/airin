@@ -95,7 +95,7 @@ export default async function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         {/* <script src="https://kit.fontawesome.com/c189d5d7c5.js" crossOrigin="anonymous" async></script> */}
-        <script type='text/javascript' src='//pl23053027.profitablegatecpm.com/be/d7/a1/bed7a11abd324a4ca2f472278ca5c384.js'></script>
+       {/* <script type='text/javascript' src='//pl23053027.profitablegatecpm.com/be/d7/a1/bed7a11abd324a4ca2f472278ca5c384.js'></script>*/}
       </head>
       <body className={inter.className}>
         <AuthProvider session={session}>
