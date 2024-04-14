@@ -45,7 +45,7 @@ function Footer() {
                     <div className="lg:flex lg:justify-between">
                         <div class="mb-6 lg:mb-0">
                             <Link class="flex items-center w-fit" href="/">
-                                <p class="PapaWatch self-center !text-4xl tracking-wider font-medium whitespace-nowrap dark:text-white">Airin</p>
+                                <p class="Airin self-center !text-4xl tracking-wider font-medium whitespace-nowrap dark:text-white">PapaWatch</p>
                                 </Link>
                             <p class="lg:text-[0.8rem] text-[0.7rem] text-[#ffffffb2] lg:w-[520px]">
                                 This site does not store any files on our server, we are linked to the media which is hosted on 3rd party services.
